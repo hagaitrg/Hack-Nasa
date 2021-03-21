@@ -22,6 +22,8 @@ Route::post('user/register', 'UserController@store');
 
 
 Route::get('/', 'VisualController@index');
+Route::get('/test', 'VisualController@index');
+
 
 
 Auth::routes();

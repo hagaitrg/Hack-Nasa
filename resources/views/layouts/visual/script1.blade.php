@@ -54,9 +54,7 @@
         });
 
         //Chart
-
         var ctx = document.getElementById('statisticsChart').getContext('2d');
-
         var statisticsChart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -240,7 +238,7 @@
             }
         });
 
-        $("#activeUsersChart").sparkline([112, 109, 120, 107, 110, 85, 87, 90, 102, 109, 120, 99, 110, 85, 87, 94], {
+        $("#activeUsersChart").sparkline([0, 109, 120, 107, 110, 85, 87, 90, 102, 109, 120, 99, 110, 85, 87, 94], {
             type: 'bar',
             height: '100',
             barWidth: 9,

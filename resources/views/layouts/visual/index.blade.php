@@ -63,7 +63,7 @@
                             Menu
                             <div class="close-menu"> <i class="flaticon-cross"></i></div>
                         </h3>
-               
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -125,7 +125,7 @@
                         </ul>
                     </div>
                     <div class="row">
-                        
+
                         <div class="col-6 col-sm-4 col-lg-3">
                             <div class="card">
                                 <div class="card-body p-3 text-center">
@@ -133,7 +133,7 @@
                                         -3%
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
-                                    <div class="h1 m-0">{{$countMahasiswa}}</div>
+                                    <div class="h1 m-0">{{ $countMahasiswa }}</div>
                                     <div class="text-muted mb-3">Jumlah Mahasiswa</div>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@
                                         9%
                                         <i class="fa fa-chevron-up"></i>
                                     </div>
-                                    <div class="h1 m-0">{{$countTelatBpp}}</div>
+                                    <div class="h1 m-0">{{ $countTelatBpp }}</div>
                                     <div class="text-muted mb-3">Telat Bayar BPP</div>
                                 </div>
                             </div>
@@ -158,7 +158,7 @@
                                         3%
                                         <i class="fa fa-chevron-up"></i>
                                     </div>
-                                    <div class="h1 m-0">{{$countPenerimaBeasiswa}}</div>
+                                    <div class="h1 m-0">{{ $countPenerimaBeasiswa }}</div>
                                     <div class="text-muted mb-3">Penerima Beasiswa</div>
                                 </div>
                             </div>
@@ -170,7 +170,7 @@
                                         -2%
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
-                                    <div class="h1 m-0">{{$countMahasiswaTelatLulus}}</div>
+                                    <div class="h1 m-0">{{ $countMahasiswaTelatLulus }}</div>
                                     <div class="text-muted mb-3">Telat Lulus</div>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                                         -1%
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
-                                    <div class="h1 m-0">{{$countPesertaLomba}}</div>
+                                    <div class="h1 m-0">{{ $countPesertaLomba }}</div>
                                     <div class="text-muted mb-3">Peserta Lomba</div>
                                 </div>
                             </div>
@@ -241,132 +241,45 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row row-card-no-pd">
-                        <div class="col-md-12">
+
+
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <h4 class="card-title">Users Geolocation</h4>
-                                        <div class="card-tools">
-                                            <button class="btn btn-icon btn-link btn-primary btn-xs"><span
-                                                    class="fa fa-angle-down"></span></button>
-                                            <button
-                                                class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span
-                                                    class="fa fa-sync-alt"></span></button>
-                                            <button class="btn btn-icon btn-link btn-primary btn-xs"><span
-                                                    class="fa fa-times"></span></button>
-                                        </div>
+                                        <h4 class="card-title">Card Name</h4>
                                     </div>
                                     <p class="card-category">
-                                        Map of the distribution of users around the world</p>
+                                        Card Category</p>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="table-responsive table-hover table-sales">
-                                                <table class="table">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="../assets/img/flags/id.png"
-                                                                        alt="indonesia">
-                                                                </div>
-                                                            </td>
-                                                            <td>Indonesia</td>
-                                                            <td class="text-right">
-                                                                2.320
-                                                            </td>
-                                                            <td class="text-right">
-                                                                42.18%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="../assets/img/flags/us.png"
-                                                                        alt="united states">
-                                                                </div>
-                                                            </td>
-                                                            <td>USA</td>
-                                                            <td class="text-right">
-                                                                240
-                                                            </td>
-                                                            <td class="text-right">
-                                                                4.36%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="../assets/img/flags/au.png"
-                                                                        alt="australia">
-                                                                </div>
-                                                            </td>
-                                                            <td>Australia</td>
-                                                            <td class="text-right">
-                                                                119
-                                                            </td>
-                                                            <td class="text-right">
-                                                                2.16%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="../assets/img/flags/ru.png" alt="russia">
-                                                                </div>
-                                                            </td>
-                                                            <td>Russia</td>
-                                                            <td class="text-right">
-                                                                1.081
-                                                            </td>
-                                                            <td class="text-right">
-                                                                19.65%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="../assets/img/flags/cn.png" alt="china">
-                                                                </div>
-                                                            </td>
-                                                            <td>China</td>
-                                                            <td class="text-right">
-                                                                1.100
-                                                            </td>
-                                                            <td class="text-right">
-                                                                20%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="../assets/img/flags/br.png" alt="brazil">
-                                                                </div>
-                                                            </td>
-                                                            <td>Brasil</td>
-                                                            <td class="text-right">
-                                                                640
-                                                            </td>
-                                                            <td class="text-right">
-                                                                11.63%
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="mapcontainer">
-                                                <div id="map-example" class="vmap"></div>
-                                            </div>
-                                        </div>
+                                        <p>Test Test</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" >
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-head-row">
+                                        <h4 class="card-title">Card Name</h4>
+                                    </div>
+                                    <p class="card-category">
+                                        Card Category</p>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <p>Test Test</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card">
@@ -529,6 +442,8 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card">
