@@ -44,8 +44,7 @@ class VisualController extends Controller
         }
 
         $arrayLombaRaw = $arrayLombaRaw["data_lomba"];
-
-        $lombaCategory = DB::select("SELECT `Nama Lomba`, COUNT(NIM) as `nama_lomba` FROM lomba GROUP BY `Nama Lomba`");
+        $lombaCategory = DB::select("SELECT `Nama Lomba` AS `nama_lomba`, COUNT(NIM) as `count` FROM lomba GROUP BY `Nama Lomba`");
         $penerimaBeasiswa = DB::select("SELECT `Jenis Beasiswa`, COUNT(NIM) as `count` FROM penerima_beasiswa GROUP BY `Jenis Beasiswa`");
         $alasanTunggakan = DB::select("SELECT `alasan tunggakan`, COUNT(nim) as `count` FROM tunggakan_bpp_mahasiswa GROUP BY `alasan tunggakan`");
         $mahasiswaTunggakan = DB::table("tunggakan_bpp_mahasiswa")->get();
