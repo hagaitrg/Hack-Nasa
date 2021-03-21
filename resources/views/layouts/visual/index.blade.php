@@ -129,7 +129,7 @@
             <div class="container">
                 <div class="page-inner page-inner-tab-style">
                     <div class="page-header">
-                        <h4 class="page-title">Dashboard</h4>
+                        <h4 class="page-title">Dashboard Kemahasiswaan</h4>
                         <ul class="breadcrumbs">
                             <li class="nav-home">
                                 <a href="#">
@@ -146,7 +146,7 @@
                                 <i class="flaticon-right-arrow"></i>
                             </li>
                             <li class="nav-item">
-                                <a href="#">Dashboard</a>
+                                <a href="#">Dashboard Kemahasiswaan</a>
                             </li>
                         </ul>
                     </div>
@@ -172,7 +172,7 @@
                                         <i class="fa fa-chevron-up"></i>
                                     </div>
                                     <div class="h1 m-0">7</div>
-                                    <div class="text-muted mb-3">New Replies</div>
+                                    <div class="text-muted mb-3">Telat Bayar BPP</div>
                                 </div>
                             </div>
                         </div>
@@ -183,8 +183,8 @@
                                         3%
                                         <i class="fa fa-chevron-up"></i>
                                     </div>
-                                    <div class="h1 m-0">27.3K</div>
-                                    <div class="text-muted mb-3">Followers</div>
+                                    <div class="h1 m-0">21</div>
+                                    <div class="text-muted mb-3"></div>
                                 </div>
                             </div>
                         </div>
@@ -711,24 +711,14 @@
                     <ul class="nav">
                         <li class="nav-item">
                             <a class="nav-link text-white" href="http://www.themekita.com">
-                                ThemeKita
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                Help
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                Licenses
+                                Mata Kuliah Enterprise Application Integration
                             </a>
                         </li>
                     </ul>
                 </nav>
                 <div class="copyright text-white ml-auto">
                     2018, made with <i class="fa fa-heart heart text-danger"></i> by <a class=" text-white"
-                        href="http://www.themekita.com">ThemeKita</a>
+                        href="https://www.henryaugusta.feylabs.my.id"> Riski Ananda, Henry Augusta , Hagai Tarigan - SI4206</a>
                 </div>
             </div>
         </footer>
