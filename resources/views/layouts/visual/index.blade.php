@@ -52,7 +52,6 @@
                     </button>
                     <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
 
-
                 </div>
             </div>
         </div>
@@ -64,42 +63,11 @@
                             Menu
                             <div class="close-menu"> <i class="flaticon-cross"></i></div>
                         </h3>
-                        <li class="nav-item active dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dashboard
-                            </a>
-                            <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="../demo1/index.html">Dashboard 1</a>
-                                <a class="dropdown-item" href="../demo2/index.html">Dashboard 2</a>
-                                <a class="dropdown-item" href="../demo3/index.html">Dashboard 3</a>
-                                <a class="dropdown-item" href="../demo4/index.html">Dashboard 4</a>
-                                <a class="dropdown-item" href="../demo5/index.html">Dashboard 5</a>
-                                <a class="dropdown-item" href="../demo6/index.html">Dashboard 6</a>
-                                <a class="dropdown-item" href="../demo7/index.html">Dashboard 7</a>
-                                <a class="dropdown-item" href="../demo8/index.html">Dashboard 8</a>
-                                <a class="dropdown-item" href="../demo9/index.html">Dashboard 9</a>
-                            </div>
-                        </li>
+               
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Apps
-                            </a>
-                            <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="boards.html">Boards</a>
-                                <a class="dropdown-item" href="projects.html">Projects</a>
-                                <a class="dropdown-item" href="email-inbox.html">Email Inbox</a>
-                                <a class="dropdown-item" href="email-detail.html">Email Detail</a>
-                                <a class="dropdown-item" href="email-compose.html">Email Compose</a>
-                                <a class="dropdown-item" href="messages.html">Messages</a>
-                                <a class="dropdown-item" href="conversations.html">Conversations</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Projects
+                                Kemahasiswaan
                             </a>
                             <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="starter-template.html">Action</a>
@@ -111,13 +79,19 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Pages
+                                Keuangan
                             </a>
                             <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="starter-template.html">Action</a>
-                                <a class="dropdown-item" href="starter-template.html">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="starter-template.html">Something else here</a>
+                                <a class="dropdown-item" href="starter-template.html">Belum Tersedia</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Akademik
+                            </a>
+                            <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="starter-template.html">Belum Tersedia</a>
                             </div>
                         </li>
                     </ul>
@@ -151,7 +125,7 @@
                         </ul>
                     </div>
                     <div class="row">
-                       
+                        
                         <div class="col-6 col-sm-4 col-lg-3">
                             <div class="card">
                                 <div class="card-body p-3 text-center">
@@ -159,11 +133,12 @@
                                         -3%
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
-                                    <div class="h1 m-0">17</div>
+                                    <div class="h1 m-0">{{$countMahasiswa}}</div>
                                     <div class="text-muted mb-3">Jumlah Mahasiswa</div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-6 col-sm-4 col-lg-3">
                             <div class="card">
                                 <div class="card-body p-3 text-center">
@@ -171,7 +146,7 @@
                                         9%
                                         <i class="fa fa-chevron-up"></i>
                                     </div>
-                                    <div class="h1 m-0">7</div>
+                                    <div class="h1 m-0">{{$countTelatBpp}}</div>
                                     <div class="text-muted mb-3">Telat Bayar BPP</div>
                                 </div>
                             </div>
@@ -183,7 +158,7 @@
                                         3%
                                         <i class="fa fa-chevron-up"></i>
                                     </div>
-                                    <div class="h1 m-0">21</div>
+                                    <div class="h1 m-0">{{$countPenerimaBeasiswa}}</div>
                                     <div class="text-muted mb-3">Penerima Beasiswa</div>
                                 </div>
                             </div>
@@ -195,7 +170,7 @@
                                         -2%
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
-                                    <div class="h1 m-0">2</div>
+                                    <div class="h1 m-0">{{$countMahasiswaTelatLulus}}</div>
                                     <div class="text-muted mb-3">Telat Lulus</div>
                                 </div>
                             </div>
@@ -207,8 +182,8 @@
                                         -1%
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
-                                    <div class="h1 m-0">621</div>
-                                    <div class="text-muted mb-3">Terpapar Covid 19</div>
+                                    <div class="h1 m-0">{{$countPesertaLomba}}</div>
+                                    <div class="text-muted mb-3">Peserta Lomba</div>
                                 </div>
                             </div>
                         </div>
@@ -544,9 +519,11 @@
                                     <h4 class="mt-5 pb-3 mb-0 fw-bold">Top active pages</h4>
                                     <ul class="list-unstyled">
                                         <li class="d-flex justify-content-between pb-1 pt-1">
-                                            <small>/product/readypro/index.html</small> <span>7</span></li>
+                                            <small>/product/readypro/index.html</small> <span>7</span>
+                                        </li>
                                         <li class="d-flex justify-content-between pb-1 pt-1">
-                                            <small>/product/atlantis/demo.html</small> <span>10</span></li>
+                                            <small>/product/atlantis/demo.html</small> <span>10</span>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -718,7 +695,8 @@
                 </nav>
                 <div class="copyright text-white ml-auto">
                     2018, made with <i class="fa fa-heart heart text-danger"></i> by <a class=" text-white"
-                        href="https://www.henryaugusta.feylabs.my.id"> Riski Ananda, Henry Augusta , Hagai Tarigan - SI4206</a>
+                        href="https://www.henryaugusta.feylabs.my.id"> Riski Ananda, Henry Augusta , Hagai Tarigan -
+                        SI4206</a>
                 </div>
             </div>
         </footer>
@@ -1182,8 +1160,12 @@
 
 
     <!-- jQuery Vector Maps -->
-    <script src="https://themekita.com/demo-atlantis-bootstrap/livepreview/examples/assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
-    <script src="https://themekita.com/demo-atlantis-bootstrap/livepreview/examples/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script
+        src="https://themekita.com/demo-atlantis-bootstrap/livepreview/examples/assets/js/plugin/jqvmap/jquery.vmap.min.js">
+    </script>
+    <script
+        src="https://themekita.com/demo-atlantis-bootstrap/livepreview/examples/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js">
+    </script>
 
 
     <!-- Chart JS -->
@@ -1225,9 +1207,9 @@
     <script src="https://themekita.com/demo-atlantis-bootstrap/livepreview/examples/assets/js/atlantis2.min.js">
     </script>
 
-    @yield('js')
+    @include('layouts.visual.script1')
 
- 
+
 </body>
 
 </html>
