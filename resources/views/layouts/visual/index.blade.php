@@ -184,7 +184,7 @@
                                         <i class="fa fa-chevron-up"></i>
                                     </div>
                                     <div class="h1 m-0">21</div>
-                                    <div class="text-muted mb-3"></div>
+                                    <div class="text-muted mb-3">Penerima Beasiswa</div>
                                 </div>
                             </div>
                         </div>
@@ -195,8 +195,8 @@
                                         -2%
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
-                                    <div class="h1 m-0">$95</div>
-                                    <div class="text-muted mb-3">Daily Earnings</div>
+                                    <div class="h1 m-0">2</div>
+                                    <div class="text-muted mb-3">Telat Lulus</div>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +208,7 @@
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
                                     <div class="h1 m-0">621</div>
-                                    <div class="text-muted mb-3">Products</div>
+                                    <div class="text-muted mb-3">Terpapar Covid 19</div>
                                 </div>
                             </div>
                         </div>
@@ -218,7 +218,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title">User Statistics</div>
+                                        <div class="card-title">Statistik Mahasiswa</div>
                                         <div class="card-tools">
                                             <a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
                                                 <span class="btn-label">
@@ -1225,8 +1225,9 @@
     <script src="https://themekita.com/demo-atlantis-bootstrap/livepreview/examples/assets/js/atlantis2.min.js">
     </script>
 
-    <!-- Atlantis DEMO methods, don't include it in your project! -->
-    <script src="https://themekita.com/demo-atlantis-bootstrap/livepreview/examples/assets/js/demo.js"></script>
+    @yield('js')
+
+ 
 </body>
 
 </html>
