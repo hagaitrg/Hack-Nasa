@@ -107,7 +107,7 @@ class VisualController extends Controller
             "providerBeasiswa",
             "mahasiswaTunggakan",
             "alasanTunggakan",
-            "dataTelatLulusgit",
+            "dataTelatLulus",
         );
 
         if (\Request::is('/')) {
