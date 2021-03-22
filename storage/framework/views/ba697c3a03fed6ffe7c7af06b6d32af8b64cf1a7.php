@@ -1,6 +1,3 @@
-
-
-
 <script>
     "use strict";
     var ctx = document.getElementById('myChartLomba').getContext('2d');

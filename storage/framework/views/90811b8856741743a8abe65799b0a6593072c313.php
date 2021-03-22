@@ -118,8 +118,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="row">
 
+                    <!-- Row Beasiswa -->
+                    <div class="row">
                         <div class="col-6 col-sm-4 col-lg-3">
                             <div class="card">
                                 <div class="card-body p-3 text-center">
@@ -231,7 +232,7 @@
                         <div class="col-md-12">
                             <h1>Lomba dan Kejuaraan</h1>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
@@ -241,10 +242,11 @@
                                 </div>
                                 <div class="card-body">
                                     <?php $__currentLoopData = $lombaCategory; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        <label><?php echo e($item->nama_lomba); ?></label><br>
+                                        <label><?php echo e($item->nama_lomba); ?></label>
+                                        <label>(<?php echo e($item->count); ?>)</label><br>
                                         <div class="progress mb-3">
                                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                                                style="width: <?php echo e($item->count * 10); ?>%"
+                                                style="width: <?php echo e($item->count * 15); ?>%"
                                                 aria-valuenow="<?php echo e($item->count); ?>" aria-valuemin="0"
                                                 aria-valuemax="5"></div>
                                         </div>
@@ -253,7 +255,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
@@ -264,13 +266,13 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <canvas id="myChartLomba" width="400" height="600"></canvas>
+                                        <canvas id="myChartLomba" width="400px" height="400px"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="card card-primary bg-success-gradient">
                                 <div class="card-body">
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Jumlah Lomba Diikuti</h4>
@@ -285,6 +287,72 @@
                             </div>
                         </div>
 
+                    </div>
+
+               
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Kesehatan Mahasiswa</h1>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-head-row">
+                                        <div class="card-title">Kesehatan Mahasiswa (Keseluruhan)</div>
+                                        <div class="card-tools">
+                                            <a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
+                                                <span class="btn-label">
+                                                    <i class="fa fa-pencil"></i>
+                                                </span>
+                                                Export
+                                            </a>
+                                            <a href="#" class="btn btn-info btn-border btn-round btn-sm">
+                                                <span class="btn-label">
+                                                    <i class="fa fa-print"></i>
+                                                </span>
+                                                Print
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-container" >
+                                        <canvas width="400" height="360px" id="statisticsHealth"></canvas>
+                                    </div>
+                                    <div id="myChartLegend"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card card-primary bg-warning-gradient">
+                                <div class="card-body">
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Status Kesehatan</h4>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Sehat</h4>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($countSehat); ?></h1>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Sehat</h4>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($countSakit); ?></h1>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Tidak Diketahui</h4>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($statusUntrackedCount); ?></h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">Sehat vs Sakit</div>
+                                </div>
+                                <div class="card-body pb-0">
+                                    <div class="chart-container">
+                                        <canvas  width="400" height="260" id="statisticsHealthSpec"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                         
+                        </div>
                     </div>
 
                     <div class="row">
@@ -310,10 +378,9 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-container" style="min-height: 375px">
+                                    <div class="chart-container" style="max-height: 300px">
                                         <canvas id="statisticsBeasiswa"></canvas>
                                     </div>
-                                    <div id="myChartLegend"></div>
                                 </div>
                             </div>
                         </div>
@@ -324,69 +391,36 @@
                                     <div class="card-title">Provider Beasiswa</div>
                                 </div>
                                 <div class="card-body pb-0">
-                                    <ol>
-                                        <?php $__currentLoopData = $providerBeasiswa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <li><?php echo e($item->provider); ?></li>
-                                            <div class="separator-dashed"></div>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                    </ol>
+                                    <div  style="max-height: 300px !important; overflow-y: scroll !important;">
+                                        <ol>
+                                            <?php $__currentLoopData = $providerBeasiswa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <li><?php echo e($item->provider); ?></li>
+                                                <div class="separator-dashed"></div>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </ol>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="card-head-row">
-                                        <div class="card-title">Statistik Mahasiswa Penerima Beasiswa</div>
-                                        <div class="card-tools">
-                                            <a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
-                                                <span class="btn-label">
-                                                    <i class="fa fa-pencil"></i>
-                                                </span>
-                                                Export
-                                            </a>
-                                            <a href="#" class="btn btn-info btn-border btn-round btn-sm">
-                                                <span class="btn-label">
-                                                    <i class="fa fa-print"></i>
-                                                </span>
-                                                Print
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-container" style="min-height: 375px">
-                                        <canvas id="statisticsChart"></canvas>
-                                    </div>
-                                    <div id="myChartLegend"></div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">Sebaran Beasiswa</div>
+                                    <div class="card-title">Provider Beasiswa</div>
                                 </div>
                                 <div class="card-body pb-0">
-                                    <div class=" mt-2">
-                                        <h1>$4,578.58</h1>
+                                    <div>
+                                        <ol>
+                                            <?php $__currentLoopData = $providerBeasiswa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <li><?php echo e($item->provider); ?></li>
+                                                <div class="separator-dashed"></div>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </ol>
                                     </div>
-                                    <div class="pull-in">
-                                        <canvas id="dailySalesChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card-primary bg-primary-gradient">
-                                <div class="card-body">
-                                    <h4 class="mb-1 fw-bold">Tasks Progress</h4>
-                                    <div id="task-complete" class="chart-circle mt-4 mb-3"></div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
 
@@ -548,24 +582,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title">Support Tickets</div>
-                                        <div class="card-tools">
-                                            <ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm"
-                                                id="pills-tab" role="tablist">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="pills-today" data-toggle="pill"
-                                                        href="#pills-today" role="tab" aria-selected="true">Today</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" id="pills-week" data-toggle="pill"
-                                                        href="#pills-week" role="tab" aria-selected="false">Week</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="pills-month" data-toggle="pill"
-                                                        href="#pills-month" role="tab" aria-selected="false">Month</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <div class="card-title">Mahasiswa Dengan Registrasi Bermasalah</div>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -697,6 +714,7 @@
     <?php echo $__env->make('layouts.visual.script1', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->make('layouts.visual.script_hitung_lomba', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->make('layouts.visual.script_spread_tak', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.visual.script_health', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
 </body>

@@ -2,7 +2,7 @@
     "use strict";
     var dailySalesChart = document.getElementById('statisticsBeasiswa').getContext('2d');
     var myDailySalesChart = new Chart(dailySalesChart, {
-        type: 'bar',
+        type: 'horizontalBar',
         data: {
             labels: ["Jumlah Penerima Beasiswa"],
             datasets: [{
@@ -61,6 +61,16 @@
             animation: {
                 easing: "easeInOutBack"
             },
+            plugins: {
+                datalabels: {
+                    anchor: 'end',
+                    align: 'top',
+                    formatter: Math.round,
+                    font: {
+                        weight: 'bold'
+                    }
+                }
+            },
             scales: {
                 yAxes: [{
                     display: !1,
@@ -85,6 +95,44 @@
                         padding: -20,
                         fontColor: "rgba(255,255,255,0.2)",
                         fontStyle: "bold"
+                    }
+                }]
+            }
+        }
+    });
+
+</script>
+
+
+<script>
+    "use strict";
+    var ctx = document.getElementById('statisticsHealth').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Sehat', 'Sakit', 'Tidak Diketahui'],
+            datasets: [{
+                label: '# Kesehatan Mahasiswa',
+                data: [<?php echo e($countSehat); ?>, <?php echo e($countSakit); ?>, <?php echo e($statusUntrackedCount); ?>],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
                     }
                 }]
             }

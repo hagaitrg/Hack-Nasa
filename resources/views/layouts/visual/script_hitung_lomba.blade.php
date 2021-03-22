@@ -1,10 +1,3 @@
-{{-- var myLineChart = new Chart(ctx, {
-    type: 'line',
-    data: data,
-    options: options
-}); --}}
-
-
 <script>
     "use strict";
     var ctx = document.getElementById('myChartLomba').getContext('2d');

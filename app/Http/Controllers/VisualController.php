@@ -13,7 +13,7 @@ class VisualController extends Controller
         $countMahasiswa = DB::table('mahasiswa')->count();
         $countTelatBpp = DB::table('tunggakan_bpp_mahasiswa')->count();
         $countPenerimaBeasiswa = DB::table('penerima_beasiswa')->count();
-        $countMahasiswaTelatLulus = DB::table('penerima_beasiswa')->count();
+        $countMahasiswaTelatLulus = DB::table('telat_lulus')->count();
         $countPesertaLomba = DB::table('lomba')->count();
 
 
@@ -80,6 +80,8 @@ class VisualController extends Controller
         $providerBeasiswa = DB::select("SELECT `Jenis Beasiswa` as `provider` FROM penerima_beasiswa GROUP BY `Jenis Beasiswa`");
         $alasanTunggakan = DB::select("SELECT `alasan tunggakan`, COUNT(nim) as `count` FROM tunggakan_bpp_mahasiswa GROUP BY `alasan tunggakan`");
         $mahasiswaTunggakan = DB::table("tunggakan_bpp_mahasiswa")->get();
+        
+        $dataTelatLulus = DB::select("SELECT semester , COUNT(nim) as `count` from telat_lulus GROUP BY semester");
 
 
         $compact  = compact(
@@ -105,6 +107,7 @@ class VisualController extends Controller
             "providerBeasiswa",
             "mahasiswaTunggakan",
             "alasanTunggakan",
+            "dataTelatLulusgit",
         );
 
         if (\Request::is('/')) {
