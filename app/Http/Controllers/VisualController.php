@@ -19,6 +19,8 @@ class VisualController extends Controller
 
         $countSakit = DB::table('covid')->where('kondisi', '=', 'Sakit')->count();
         $countSehat = DB::table('covid')->where('kondisi', '=', 'Sehat')->count();
+        $statusUntrackedCount = DB::table(`mahasiswa`)->all()->count() - $countSakit - $countSehat;
+
 
         $beasiswaPrestasiCount = DB::table('penerima_beasiswa')->where('Jenis Beasiswa', '=', 'Beasiswa Prestasi')->count();
         $beasiswaKominfoCount = DB::table('penerima_beasiswa')->where('Jenis Beasiswa', '=', 'Beasiswa Kominfo')->count();
@@ -42,6 +44,7 @@ class VisualController extends Controller
 
 
         $dataLomba = Lomba::all();
+        $lombaCount = Lomba::all()->count();
         $arrayLombaRaw = array();
         $lomba18 = 0;
         $lomba19 = 0;
@@ -87,6 +90,8 @@ class VisualController extends Controller
             "countPesertaLomba",
             "countSakit",
             "countSehat",
+            "statusUntrackedCount",
+            "lombaCount",
             "lomba18",
             "lomba19",
             "lomba20",

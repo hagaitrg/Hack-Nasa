@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Dashboaed Kemahasiswaan</title>
+    <title>Dashbord Kemahasiswaan</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <link rel="icon" href="../assets/img/icon.ico" type="image/x-icon" />
 
@@ -69,12 +69,6 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Kemahasiswaan
                             </a>
-                            <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="starter-template.html">Action</a>
-                                <a class="dropdown-item" href="starter-template.html">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="starter-template.html">Something else here</a>
-                            </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -189,10 +183,6 @@
                         </div>
                     </div>
 
-         
-
-                    
-                    
 
                     <div class="row">
                         <div class="col-md-12">
@@ -238,7 +228,10 @@
 
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
+                            <h1>Lomba dan Kejuaraan</h1>
+                        </div>
+                        <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
@@ -250,7 +243,7 @@
                                     <?php $__currentLoopData = $lombaCategory; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <label><?php echo e($item->nama_lomba); ?></label><br>
                                         <div class="progress mb-3">
-                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
                                                 style="width: <?php echo e($item->count * 10); ?>%"
                                                 aria-valuenow="<?php echo e($item->count); ?>" aria-valuemin="0"
                                                 aria-valuemax="5"></div>
@@ -260,7 +253,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
@@ -271,30 +264,27 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <canvas id="myChartLomba" width="400" height="400"></canvas>
+                                        <canvas id="myChartLomba" width="400" height="600"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        
-                   
-
-                     
-
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="card-head-row">
-                                        <h4 class="card-title">Statistik Peserta Lomba</h4>
-                                    </div>
-                                    <p class="card-category">Peserta Tiap Lomba</p>
-                                </div>
+                        <div class="col-md-4">
+                            <div class="card card-primary bg-success-gradient">
                                 <div class="card-body">
-
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Jumlah Lomba Diikuti</h4>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($lomba18+$lomba19+$lomba20); ?> Perlombaan</h1>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Terbanyak Diikuti</h4>
+                                    <h1 class="mb-4 fw-bold">Bisnis Plan UI 2020</h1>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Terjarang Diikuti</h4>
+                                    <h1 class="mb-4 fw-bold">Imagine Cup 2018</h1>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Total Mahasiswa </h4>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($lombaCount); ?></h1>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                     <div class="row">
