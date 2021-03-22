@@ -179,3 +179,4 @@
 
 
     </script>
+<?php /**PATH D:\ProjectWeb\eai2\resources\views/layouts/visual/script1.blade.php ENDPATH**/ ?>
