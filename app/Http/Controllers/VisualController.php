@@ -19,7 +19,7 @@ class VisualController extends Controller
 
         $countSakit = DB::table('covid')->where('kondisi', '=', 'Sakit')->count();
         $countSehat = DB::table('covid')->where('kondisi', '=', 'Sehat')->count();
-        $statusUntrackedCount = DB::table(`mahasiswa`)->all()->count() - $countSakit - $countSehat;
+        $statusUntrackedCount = DB::table(`mahasiswa`)->count() - $countSakit - $countSehat;
 
 
         $beasiswaPrestasiCount = DB::table('penerima_beasiswa')->where('Jenis Beasiswa', '=', 'Beasiswa Prestasi')->count();
