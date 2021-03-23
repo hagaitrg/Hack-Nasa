@@ -18,7 +18,8 @@
                 "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular",
                     "Font Awesome 5 Brands", "simple-line-icons"
                 ],
-                urls: ['<?php echo e(asset('main_asset/examples')); ?>/assets/css/fonts.min.css']
+                urls: ['<?php echo e(asset('
+                    main_asset / examples ')); ?>/assets/css/fonts.min.css']
             },
             active: function() {
                 sessionStorage.fonts = true;
@@ -245,8 +246,8 @@
                                         <label><?php echo e($item->nama_lomba); ?></label>
                                         <label>(<?php echo e($item->count); ?>)</label><br>
                                         <div class="progress mb-3">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                                                style="width: <?php echo e($item->count * 15); ?>%"
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" style="width: <?php echo e($item->count * 15); ?>%"
                                                 aria-valuenow="<?php echo e($item->count); ?>" aria-valuemin="0"
                                                 aria-valuemax="5"></div>
                                         </div>
@@ -276,7 +277,7 @@
                             <div class="card card-primary bg-success-gradient">
                                 <div class="card-body">
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Jumlah Lomba Diikuti</h4>
-                                    <h1 class="mb-4 fw-bold"><?php echo e($lomba18+$lomba19+$lomba20); ?> Perlombaan</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($lomba18 + $lomba19 + $lomba20); ?> Perlombaan</h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Terbanyak Diikuti</h4>
                                     <h1 class="mb-4 fw-bold">Bisnis Plan UI 2020</h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Terjarang Diikuti</h4>
@@ -289,7 +290,7 @@
 
                     </div>
 
-               
+
 
                     <div class="row">
                         <div class="col-md-12">
@@ -318,7 +319,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-container" >
+                                    <div class="chart-container">
                                         <canvas width="400" height="360px" id="statisticsHealth"></canvas>
                                     </div>
                                     <div id="myChartLegend"></div>
@@ -347,11 +348,11 @@
                                 </div>
                                 <div class="card-body pb-0">
                                     <div class="chart-container">
-                                        <canvas  width="400" height="260" id="statisticsHealthSpec"></canvas>
+                                        <canvas width="400" height="260" id="statisticsHealthSpec"></canvas>
                                     </div>
                                 </div>
                             </div>
-                         
+
                         </div>
                     </div>
 
@@ -391,7 +392,7 @@
                                     <div class="card-title">Provider Beasiswa</div>
                                 </div>
                                 <div class="card-body pb-0">
-                                    <div  style="max-height: 300px !important; overflow-y: scroll !important;">
+                                    <div style="max-height: 300px !important; overflow-y: scroll !important;">
                                         <ol>
                                             <?php $__currentLoopData = $providerBeasiswa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <li><?php echo e($item->provider); ?></li>
@@ -406,16 +407,11 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">Provider Beasiswa</div>
+                                    <div class="card-title">Telat Lulus</div>
                                 </div>
                                 <div class="card-body pb-0">
-                                    <div>
-                                        <ol>
-                                            <?php $__currentLoopData = $providerBeasiswa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                <li><?php echo e($item->provider); ?></li>
-                                                <div class="separator-dashed"></div>
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                        </ol>
+                                    <div class="row">
+                                        <canvas id="myChartTelatLulus" width="400" height="460"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -426,7 +422,6 @@
 
 
                     <div class="row">
-
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-body">
@@ -715,6 +710,7 @@
     <?php echo $__env->make('layouts.visual.script_hitung_lomba', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->make('layouts.visual.script_spread_tak', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->make('layouts.visual.script_health', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.visual.script_telat_lulus', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
 </body>

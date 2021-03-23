@@ -5,19 +5,19 @@
         type: 'doughnut',
         data: {
             labels: [
-                'Semester' + {{$dataTelatLulus[0]->semester}},
-                'Semester' + {{$dataTelatLulus[1]->semester}},
-                'Semester' + {{$dataTelatLulus[2]->semester}},
-                'Semester' + {{$dataTelatLulus[3]->semester}},
-                'Semester' + {{$dataTelatLulus[4]->semester}},],
+                'Semester' + <?php echo e($dataTelatLulus[0]->semester); ?>,
+                'Semester' + <?php echo e($dataTelatLulus[1]->semester); ?>,
+                'Semester' + <?php echo e($dataTelatLulus[2]->semester); ?>,
+                'Semester' + <?php echo e($dataTelatLulus[3]->semester); ?>,
+                'Semester' + <?php echo e($dataTelatLulus[4]->semester); ?>,],
             datasets: [{
                 label: '# Jumlah Mahasiswa',
                 data: [
-                    {{ $dataTelatLulus[0]->count }},
-                    {{ $dataTelatLulus[1]->count }},
-                    {{ $dataTelatLulus[2]->count }},
-                    {{ $dataTelatLulus[3]->count }},
-                    {{ $dataTelatLulus[4]->count }}],
+                    <?php echo e($dataTelatLulus[0]->count); ?>,
+                    <?php echo e($dataTelatLulus[1]->count); ?>,
+                    <?php echo e($dataTelatLulus[2]->count); ?>,
+                    <?php echo e($dataTelatLulus[3]->count); ?>,
+                    <?php echo e($dataTelatLulus[4]->count); ?>],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -46,3 +46,4 @@
     });
 
 </script>
+<?php /**PATH D:\ProjectWeb\eai2\resources\views/layouts/visual/script_telat_lulus.blade.php ENDPATH**/ ?>
