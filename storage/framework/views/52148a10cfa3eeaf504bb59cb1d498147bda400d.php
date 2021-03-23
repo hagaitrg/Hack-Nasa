@@ -267,7 +267,7 @@
                             <div class="card card-primary bg-success-gradient">
                                 <div class="card-body">
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Jumlah Lomba Diikuti</h4>
-                                    <h1 class="mb-4 fw-bold"><?php echo e($lomba18+$lomba19+$lomba20); ?> Perlombaan</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($lomba18 + $lomba19 + $lomba20); ?> Perlombaan</h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Terbanyak Diikuti</h4>
                                     <h1 class="mb-4 fw-bold">Bisnis Plan UI 2020</h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Terjarang Diikuti</h4>
@@ -393,30 +393,43 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">Provider Beasiswa</div>
+                                    <div class="card-title">Telat Lulus</div>
                                 </div>
                                 <div class="card-body pb-0">
-                                    <div class="card  ">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <canvas id="myChartTelatLulus" width="400" height="260"></canvas>
-                                            </div>
-                                        </div>
+                                    <div class="row">
+                                        <canvas id="myChartTelatLulus" width="400" height="460"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                        <div class="col-md-6">
+                            <div class="card card-primary bg-danger-gradient">
+                                <div class="card-body">
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Status Telat Lulus</h4>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Smester <?php echo e($dataTelatLulus[0]->semester); ?></h4>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($dataTelatLulus[0]->count); ?></h1>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Smester <?php echo e($dataTelatLulus[1]->semester); ?></h4>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($dataTelatLulus[1]->count); ?></h1>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Smester <?php echo e($dataTelatLulus[2]->semester); ?></h4>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($dataTelatLulus[2]->count); ?></h1>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Smester <?php echo e($dataTelatLulus[3]->semester); ?></h4>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($dataTelatLulus[3]->count); ?></h1>
+                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Smester <?php echo e($dataTelatLulus[4]->semester); ?></h4>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($dataTelatLulus[4]->count); ?></h1>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
 
                     <div class="row">
-
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-body">
