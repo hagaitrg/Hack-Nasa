@@ -430,103 +430,56 @@
 
 
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="card-title fw-mediumbold">Suggested People</div>
+                                    <div class="card-title fw-mediumbold">Status Tuunggakan Mahasiswa</div>
                                     <div class="card-list">
+                                        <?php $__currentLoopData = $mahasiswaTunggakan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <div class="item-list">
-                                            <div class="avatar">
-                                                <img src="../assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
-                                            </div>
                                             <div class="info-user ml-3">
-                                                <div class="username">Jimmy Denis</div>
-                                                <div class="status">Graphic Designer</div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="nim">NIM</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="nim">: <?php echo e($item->nim); ?></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="nama">Nama</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="nama">: <?php echo e($item->nama); ?></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="alasan">Alasan</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="alasan">: <?php echo e($item->alasan_tunggakan); ?></div>
+                                                    </div>
+                                                </div>
+                                                <hr>
                                             </div>
-                                            <button class="btn btn-icon btn-primary btn-round btn-xs">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
                                         </div>
-                                        <div class="item-list">
-                                            <div class="avatar">
-                                                <img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle">
-                                            </div>
-                                            <div class="info-user ml-3">
-                                                <div class="username">Chad</div>
-                                                <div class="status">CEO Zeleaf</div>
-                                            </div>
-                                            <button class="btn btn-icon btn-primary btn-round btn-xs">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
-                                        </div>
-                                        <div class="item-list">
-                                            <div class="avatar">
-                                                <img src="../assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle">
-                                            </div>
-                                            <div class="info-user ml-3">
-                                                <div class="username">Talha</div>
-                                                <div class="status">Front End Designer</div>
-                                            </div>
-                                            <button class="btn btn-icon btn-primary btn-round btn-xs">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
-                                        </div>
-                                        <div class="item-list">
-                                            <div class="avatar">
-                                                <img src="../assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
-                                            </div>
-                                            <div class="info-user ml-3">
-                                                <div class="username">John Doe</div>
-                                                <div class="status">Back End Developer</div>
-                                            </div>
-                                            <button class="btn btn-icon btn-primary btn-round btn-xs">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
-                                        </div>
-                                        <div class="item-list">
-                                            <div class="avatar">
-                                                <img src="../assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle">
-                                            </div>
-                                            <div class="info-user ml-3">
-                                                <div class="username">Talha</div>
-                                                <div class="status">Front End Designer</div>
-                                            </div>
-                                            <button class="btn btn-icon btn-primary btn-round btn-xs">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
-                                        </div>
-                                        <div class="item-list">
-                                            <div class="avatar">
-                                                <img src="../assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
-                                            </div>
-                                            <div class="info-user ml-3">
-                                                <div class="username">Jimmy Denis</div>
-                                                <div class="status">Graphic Designer</div>
-                                            </div>
-                                            <button class="btn btn-icon btn-primary btn-round btn-xs">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
-                                        </div>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card card-primary bg-primary-gradient">
-                                <div class="card-body">
-                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Active user right now</h4>
-                                    <h1 class="mb-4 fw-bold">17</h1>
-                                    <h4 class="mt-3 b-b1 pb-2 mb-5 fw-bold">Page view per minutes</h4>
-                                    <div id="activeUsersChart"></div>
-                                    <h4 class="mt-5 pb-3 mb-0 fw-bold">Top active pages</h4>
-                                    <ul class="list-unstyled">
-                                        <li class="d-flex justify-content-between pb-1 pt-1">
-                                            <small>/product/readypro/index.html</small> <span>7</span>
-                                        </li>
-                                        <li class="d-flex justify-content-between pb-1 pt-1">
-                                            <small>/product/atlantis/demo.html</small> <span>10</span>
-                                        </li>
-                                    </ul>
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">Tunggakan BPP Mahasiswa</div>
+                                </div>
+                                <div class="card-body pb-0">
+                                    <div class="row">
+                                        <canvas id="myChartTunggakan" width="400" height="460"></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -698,6 +651,7 @@
     <?php echo $__env->make('layouts.visual.script_spread_tak', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->make('layouts.visual.script_health', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->make('layouts.visual.script_telat_lulus', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.visual.script_tunggakan', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
 </body>

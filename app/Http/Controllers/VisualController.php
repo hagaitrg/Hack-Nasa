@@ -78,7 +78,7 @@ class VisualController extends Controller
         $lombaCategory = DB::select("SELECT `Nama Lomba` AS `nama_lomba`, COUNT(NIM) as `count` FROM lomba GROUP BY `Nama Lomba`");
         $penerimaBeasiswa = DB::select("SELECT `Jenis Beasiswa` as `from`, COUNT(NIM) as `count` FROM penerima_beasiswa GROUP BY `Jenis Beasiswa`");
         $providerBeasiswa = DB::select("SELECT `Jenis Beasiswa` as `provider` FROM penerima_beasiswa GROUP BY `Jenis Beasiswa`");
-        $alasanTunggakan = DB::select("SELECT `alasan tunggakan`, COUNT(nim) as `count` FROM tunggakan_bpp_mahasiswa GROUP BY `alasan tunggakan`");
+        $alasanTunggakan = DB::select("SELECT `alasan_tunggakan`, COUNT(nim) as `count` FROM tunggakan_bpp_mahasiswa GROUP BY `alasan_tunggakan`");
         $mahasiswaTunggakan = DB::table("tunggakan_bpp_mahasiswa")->get();
 
         $dataTelatLulus = DB::select("SELECT semester , COUNT(nim) as `count` from telat_lulus GROUP BY semester");
