@@ -114,7 +114,7 @@ class VisualController extends Controller
             return view('layouts.visual.index')->with($compact);
             // show companies menu or something
         } else {
-            return dd($compact);
+            return ($compact);
         }
     }
 }

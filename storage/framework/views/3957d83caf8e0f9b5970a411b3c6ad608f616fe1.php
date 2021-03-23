@@ -5,18 +5,18 @@
         type: 'polarArea',
         data: {
             labels: [
-                'Alasan' + '{{$alasanTunggakan[0]->alasan_tunggakan}}',
-                'Alasan' + '{{$alasanTunggakan[1]->alasan_tunggakan}}',
-                'Alasan' + '{{$alasanTunggakan[2]->alasan_tunggakan}}',
-                'Alasan' + '{{$alasanTunggakan[3]->alasan_tunggakan}}',
+                'Alasan' + '<?php echo e($alasanTunggakan[0]->alasan_tunggakan); ?>',
+                'Alasan' + '<?php echo e($alasanTunggakan[1]->alasan_tunggakan); ?>',
+                'Alasan' + '<?php echo e($alasanTunggakan[2]->alasan_tunggakan); ?>',
+                'Alasan' + '<?php echo e($alasanTunggakan[3]->alasan_tunggakan); ?>',
             ],
             datasets: [{
                 label: '# Jumlah Mahasiswa',
                 data: [
-                    {{$alasanTunggakan[0]->count }},
-                    {{$alasanTunggakan[1]->count }},
-                    {{$alasanTunggakan[2]->count }},
-                    {{$alasanTunggakan[3]->count }},
+                    <?php echo e($alasanTunggakan[0]->count); ?>,
+                    <?php echo e($alasanTunggakan[1]->count); ?>,
+                    <?php echo e($alasanTunggakan[2]->count); ?>,
+                    <?php echo e($alasanTunggakan[3]->count); ?>,
                 ],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -38,4 +38,4 @@
          
         }
     });
-</script>
+</script><?php /**PATH D:\ProjectWeb\eai2\resources\views/layouts/visual/script_tunggakan.blade.php ENDPATH**/ ?>

@@ -9,7 +9,7 @@
                 'Semester' + {{$dataTelatLulus[1]->semester}},
                 'Semester' + {{$dataTelatLulus[2]->semester}},
                 'Semester' + {{$dataTelatLulus[3]->semester}},
-                'Semester' + {{$dataTelatLulus[4]->semester}},],
+                'Semester' + {{$dataTelatLulus[4]->semester}}],
             datasets: [{
                 label: '# Jumlah Mahasiswa',
                 data: [

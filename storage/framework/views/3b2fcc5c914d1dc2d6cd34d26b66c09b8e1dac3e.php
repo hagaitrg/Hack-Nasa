@@ -9,7 +9,7 @@
                 'Semester' + <?php echo e($dataTelatLulus[1]->semester); ?>,
                 'Semester' + <?php echo e($dataTelatLulus[2]->semester); ?>,
                 'Semester' + <?php echo e($dataTelatLulus[3]->semester); ?>,
-                'Semester' + <?php echo e($dataTelatLulus[4]->semester); ?>,],
+                'Semester' + <?php echo e($dataTelatLulus[4]->semester); ?>],
             datasets: [{
                 label: '# Jumlah Mahasiswa',
                 data: [
