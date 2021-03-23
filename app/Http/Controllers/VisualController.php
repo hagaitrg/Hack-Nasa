@@ -40,7 +40,7 @@ class VisualController extends Controller
             DB::table('tak_mhs')
             ->where('Nilai TAK', '>=', 60)
             ->where('Nilai TAK', '<=', 100)->count();
-        $tak4Count = DB::table('tak_mhs')->where('Nilai TAK', '>',100)->count();
+        $tak4Count = DB::table('tak_mhs')->where('Nilai TAK', '>', 100)->count();
 
 
         $dataLomba = Lomba::all();
@@ -80,7 +80,7 @@ class VisualController extends Controller
         $providerBeasiswa = DB::select("SELECT `Jenis Beasiswa` as `provider` FROM penerima_beasiswa GROUP BY `Jenis Beasiswa`");
         $alasanTunggakan = DB::select("SELECT `alasan tunggakan`, COUNT(nim) as `count` FROM tunggakan_bpp_mahasiswa GROUP BY `alasan tunggakan`");
         $mahasiswaTunggakan = DB::table("tunggakan_bpp_mahasiswa")->get();
-        
+
         $dataTelatLulus = DB::select("SELECT semester , COUNT(nim) as `count` from telat_lulus GROUP BY semester");
 
 
@@ -114,7 +114,7 @@ class VisualController extends Controller
             return view('layouts.visual.index')->with($compact);
             // show companies menu or something
         } else {
-            return $compact;
+            return dd($compact);
         }
     }
 }

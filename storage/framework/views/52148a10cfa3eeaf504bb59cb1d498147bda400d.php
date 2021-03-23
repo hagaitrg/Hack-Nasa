@@ -8,7 +8,7 @@
     <link rel="icon" href="../assets/img/icon.ico" type="image/x-icon" />
 
     <!-- Fonts and icons -->
-    <script src="{{ asset('main_asset/examples') }}/assets/js/plugin/webfont/webfont.min.js"></script>
+    <script src="<?php echo e(asset('main_asset/examples')); ?>/assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
         WebFont.load({
             google: {
@@ -18,8 +18,8 @@
                 "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular",
                     "Font Awesome 5 Brands", "simple-line-icons"
                 ],
-                urls: ['{{ asset('
-                    main_asset / examples ') }}/assets/css/fonts.min.css'
+                urls: ['<?php echo e(asset('
+                    main_asset / examples ')); ?>/assets/css/fonts.min.css'
                 ]
             },
             active: function() {
@@ -122,7 +122,7 @@
                                         -3%
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
-                                    <div class="h1 m-0">{{ $countMahasiswa }}</div>
+                                    <div class="h1 m-0"><?php echo e($countMahasiswa); ?></div>
                                     <div class="text-muted mb-3">Jumlah Mahasiswa</div>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                                         9%
                                         <i class="fa fa-chevron-up"></i>
                                     </div>
-                                    <div class="h1 m-0">{{ $countTelatBpp }}</div>
+                                    <div class="h1 m-0"><?php echo e($countTelatBpp); ?></div>
                                     <div class="text-muted mb-3">Telat Bayar BPP</div>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@
                                         3%
                                         <i class="fa fa-chevron-up"></i>
                                     </div>
-                                    <div class="h1 m-0">{{ $countPenerimaBeasiswa }}</div>
+                                    <div class="h1 m-0"><?php echo e($countPenerimaBeasiswa); ?></div>
                                     <div class="text-muted mb-3">Penerima Beasiswa</div>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@
                                         -2%
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
-                                    <div class="h1 m-0">{{ $countMahasiswaTelatLulus }}</div>
+                                    <div class="h1 m-0"><?php echo e($countMahasiswaTelatLulus); ?></div>
                                     <div class="text-muted mb-3">Telat Lulus</div>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                                         -1%
                                         <i class="fa fa-chevron-down"></i>
                                     </div>
-                                    <div class="h1 m-0">{{ $countPesertaLomba }}</div>
+                                    <div class="h1 m-0"><?php echo e($countPesertaLomba); ?></div>
                                     <div class="text-muted mb-3">Peserta Lomba</div>
                                 </div>
                             </div>
@@ -188,11 +188,11 @@
                             <div class="card card-primary bg-primary-gradient">
                                 <div class="card-body">
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Total TAK Mahasiswa</h4>
-                                    <h1 class="mb-4 fw-bold">{{ $takCount }}</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($takCount); ?></h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Mahasiswa Penginput TAK</h4>
                                     <h1 class="mb-4 fw-bold">100</h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Rata-Rata TAK</h4>
-                                    <h1 class="mb-4 fw-bold">{{ $takCount / 100 }}</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($takCount / 100); ?></h1>
                                 </div>
                             </div>
                         </div>
@@ -201,11 +201,11 @@
                             <div class="card card-primary bg-success-gradient">
                                 <div class="card-body">
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Poin TAK 0-30</h4>
-                                    <h1 class="mb-4 fw-bold">{{ $tak1Count }} Mahasiswa</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($tak1Count); ?> Mahasiswa</h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Poin TAK 30-59</h4>
-                                    <h1 class="mb-4 fw-bold">{{ $tak2Count }} Mahasiswa</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($tak2Count); ?> Mahasiswa</h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Poin TAK >60</h4>
-                                    <h1 class="mb-4 fw-bold">{{ $tak3Count + $tak4Count }} Mahasiswa</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($tak3Count + $tak4Count); ?> Mahasiswa</h1>
                                 </div>
                             </div>
                         </div>
@@ -235,13 +235,13 @@
                                     <p class="card-category">Peserta Tiap Lomba</p>
                                 </div>
                                 <div class="card-body">
-                                    @foreach ($lombaCategory as $item)
-                                    <label>{{ $item->nama_lomba }}</label>
-                                    <label>({{ $item->count }})</label><br>
+                                    <?php $__currentLoopData = $lombaCategory; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <label><?php echo e($item->nama_lomba); ?></label>
+                                    <label>(<?php echo e($item->count); ?>)</label><br>
                                     <div class="progress mb-3">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{ $item->count * 15 }}%" aria-valuenow="{{ $item->count }}" aria-valuemin="0" aria-valuemax="5"></div>
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?php echo e($item->count * 15); ?>%" aria-valuenow="<?php echo e($item->count); ?>" aria-valuemin="0" aria-valuemax="5"></div>
                                     </div>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </div>
                             </div>
                         </div>
@@ -267,13 +267,13 @@
                             <div class="card card-primary bg-success-gradient">
                                 <div class="card-body">
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Jumlah Lomba Diikuti</h4>
-                                    <h1 class="mb-4 fw-bold">{{ $lomba18+$lomba19+$lomba20 }} Perlombaan</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($lomba18+$lomba19+$lomba20); ?> Perlombaan</h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Terbanyak Diikuti</h4>
                                     <h1 class="mb-4 fw-bold">Bisnis Plan UI 2020</h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Terjarang Diikuti</h4>
                                     <h1 class="mb-4 fw-bold">Imagine Cup 2018</h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Total Mahasiswa </h4>
-                                    <h1 class="mb-4 fw-bold">{{ $lombaCount }}</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($lombaCount); ?></h1>
                                 </div>
                             </div>
                         </div>
@@ -322,11 +322,11 @@
                                 <div class="card-body">
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Status Kesehatan</h4>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Sehat</h4>
-                                    <h1 class="mb-4 fw-bold">{{$countSehat}}</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($countSehat); ?></h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Sehat</h4>
-                                    <h1 class="mb-4 fw-bold">{{$countSakit}}</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($countSakit); ?></h1>
                                     <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Tidak Diketahui</h4>
-                                    <h1 class="mb-4 fw-bold">{{ $statusUntrackedCount }}</h1>
+                                    <h1 class="mb-4 fw-bold"><?php echo e($statusUntrackedCount); ?></h1>
                                 </div>
                             </div>
                         </div>
@@ -384,10 +384,10 @@
                                 <div class="card-body pb-0">
                                     <div style="max-height: 300px !important; overflow-y: scroll !important;">
                                         <ol>
-                                            @foreach ($providerBeasiswa as $item)
-                                            <li>{{ $item->provider }}</li>
+                                            <?php $__currentLoopData = $providerBeasiswa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <li><?php echo e($item->provider); ?></li>
                                             <div class="separator-dashed"></div>
-                                            @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </ol>
                                     </div>
                                 </div>
@@ -678,15 +678,15 @@
     </div>
 
 
-    @include('layouts.visual.js_inject')
-    @include('layouts.visual.script_beasiswa')
-    @include('layouts.visual.script1')
-    @include('layouts.visual.script_hitung_lomba')
-    @include('layouts.visual.script_spread_tak')
-    @include('layouts.visual.script_health')
-    @include('layouts.visual.script_telat_lulus')
+    <?php echo $__env->make('layouts.visual.js_inject', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.visual.script_beasiswa', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.visual.script1', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.visual.script_hitung_lomba', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.visual.script_spread_tak', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.visual.script_health', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.visual.script_telat_lulus', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
 </body>
 
-</html>
+</html><?php /**PATH F:\Kuliah\EAI\hack-nasa\Hack-Nasa\resources\views/layouts/visual/index.blade.php ENDPATH**/ ?>
